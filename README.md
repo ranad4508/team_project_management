@@ -13,9 +13,14 @@
   <strong>SaaS Project Management Web Application Built with Modern Tech Stack</strong>
 </p>
 
-[Demo](https://demo.worksphere.com) • [Documentation](https://docs.worksphere.com) • [Report Bug](https://github.com/yourusername/worksphere/issues) • [Request Feature](https://github.com/yourusername/worksphere/issues)
+<!-- Optional links — uncomment or update when available -->
+<!-- [Demo](https://your-demo-link.com) • [Documentation](https://your-docs-link.com) -->
 
-![Project Demo](docs/assets/demo.gif)
+[Report Bug](https://github.com/ranad4508/team_project_management/issues) • [Request Feature](https://github.com/ranad4508/team_project_management/issues)
+
+<!-- Replace this with your actual demo GIF or image path -->
+
+![Project Demo](./docs/assets/demo.gif)
 
 </div>
 
