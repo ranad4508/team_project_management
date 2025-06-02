@@ -10,7 +10,7 @@
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 <p align="center">
-  <strong>Enterprise-Grade Project Management Solution Built with Modern Tech Stack</strong>
+  <strong>SaaS Project Management Web Application Built with Modern Tech Stack</strong>
 </p>
 
 [Demo](https://demo.worksphere.com) • [Documentation](https://docs.worksphere.com) • [Report Bug](https://github.com/yourusername/worksphere/issues) • [Request Feature](https://github.com/yourusername/worksphere/issues)
@@ -69,7 +69,6 @@ npm run dev
 ### Project & Workspace Management
 
 - Create & manage multiple workspaces
-- Use templates for faster setup
 - Define custom workflows
 - Allocate team resources efficiently
 
@@ -82,7 +81,7 @@ npm run dev
 ### Real-Time Collaboration
 
 - Instant updates across devices
-- Activity tracking and notifications
+- Activity tracking
 
 ---
 
@@ -94,7 +93,7 @@ npm run dev
 | **Frontend** | **React.js**, **Vite.js**, **TypeScript**   |
 | **UI/UX**    | **Tailwind CSS**, **Shadcn UI**             |
 | **Database** | **MongoDB**, **Mongoose**                   |
-| **Auth**     | **Google OAuth**, **JWT**, **Cookies**      |
+| **Auth**     | **Google OAuth**, **Cookie-Session"**       |
 
 ---
 
@@ -120,8 +119,6 @@ cp .env.example .env
 # Install project dependencies
 npm install
 
-# Run migrations if needed
-npm run migrate
 ```
 
 ---
@@ -147,18 +144,14 @@ SESSION_SECRET=session-secret
 GOOGLE_CLIENT_ID=your-google-client-id
 GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-# Redis (optional)
-REDIS_URL=redis://localhost:6379
 
-# Monitoring (optional)
-SENTRY_DSN=your-sentry-dsn
 ```
 
 ---
 
 ## 🔒 Security
 
-- ✅ JWT with HttpOnly cookies
+- ✅ Cookie Session
 - ✅ Bcrypt for password hashing
 - ✅ CORS, Helmet, and Rate Limiting
 - ✅ CSRF & XSS Protection
