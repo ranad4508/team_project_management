@@ -183,7 +183,7 @@ Licensed under the [MIT License](LICENSE)
 
 <div align="center">
   <p>If you found this project helpful, please give it a ⭐</p>
-  <a href="https://github.com/ranad4508/team_project_management.git">
-    <img src="https://github.com/ranad4508/team_project_management.git" alt="Stargazers"/>
+  <a href="https://github.com/ranad4508/team_project_management">
+    <img src="https://reporoster.com/stars/ranad4508/team_project_management" alt="Stargazers"/>
   </a>
 </div>
