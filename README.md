@@ -1,14 +1,12 @@
-````markdown
 # 🌐 WorkSphere
 
 <div align="center">
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![Build Status](https://github.com/yourusername/worksphere/workflows/build/badge.svg)](https://github.com/yourusername/worksphere/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/worksphere/build.yml?branch=main)](https://github.com/yourusername/worksphere/actions)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Node Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 <p align="center">
@@ -21,15 +19,19 @@
 
 </div>
 
+---
+
 ## 📌 Overview
 
-**WorkSphere** is an enterprise-grade project management platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and TypeScript. It enables teams to:
+**WorkSphere** is a robust project management platform built using the MERN stack and TypeScript. It helps teams manage their workflow and boost productivity with:
 
-- 🔄 Manage projects with real-time updates
-- 👥 Collaborate through workspaces
-- 📊 Track progress with analytics
-- 🎯 Handle tasks efficiently
-- 🔐 Maintain security with role-based access
+- 🔄 Real-time project tracking
+- 👥 Workspace-based collaboration
+- 📊 Visual analytics
+- ✅ Task prioritization
+- 🔐 Role-based access control
+
+---
 
 ## 📑 Table of Contents
 
@@ -38,204 +40,157 @@
 - [Tech Stack](#-tech-stack)
 - [Installation](#-installation)
 - [Environment Setup](#-environment-setup)
-- [API Documentation](#-api-documentation)
 - [Security](#-security)
-- [Deployment](#-deployment)
 - [Troubleshooting](#-troubleshooting)
 - [License](#-license)
+
+---
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/ranad4508/team_project_management.git
 
-# Move to project directory. E.g: backend/frontend
+# Navigate to backend or frontend folder
 cd backend
 
 # Install dependencies
-npm install --legacy-peer-deps
+npm install
 
-# Start development servers
+# Start the development server
 npm run dev
 ```
 
+---
+
 ## ⚡ Features
 
-### Core Features
+### Project & Workspace Management
 
-- **Workspaces & Projects**
+- Create & manage multiple workspaces
+- Use templates for faster setup
+- Define custom workflows
+- Allocate team resources efficiently
 
-  - Multi-workspace support
-  - Project templates
-  - Custom workflows
-  - Resource allocation
+### Task & Sprint Management
 
-- **Task Management**
+- Sprint planning and backlog grooming
+- Assign and track tasks
+- Track task dependencies
 
-  - Sprint planning
-  - Time tracking
-  - Dependencies
+### Real-Time Collaboration
 
-- **Team Collaboration**
-  - Real-time updates
+- Instant updates across devices
+- Activity tracking and notifications
+
+---
 
 ## 💻 Tech Stack
 
-### Frontend Architecture
+| Layer        | Technology                                  |
+| ------------ | ------------------------------------------- |
+| **Backend**  | **Node.js**, **Express.js**, **TypeScript** |
+| **Frontend** | **React.js**, **Vite.js**, **TypeScript**   |
+| **UI/UX**    | **Tailwind CSS**, **Shadcn UI**             |
+| **Database** | **MongoDB**, **Mongoose**                   |
+| **Auth**     | **Google OAuth**, **JWT**, **Cookies**      |
 
-- **Core Framework**: React 18 with TypeScript
-- **State Management**: Redux Toolkit + RTK Query
-- **UI/UX**:
-  - Tailwind CSS
-  - Headless UI
-  - Framer Motion
-- **Data Fetching**: React Query
-- **Forms**: React Hook Form + Zod
-- **Testing**: Jest + RTL
-
-### Backend Architecture
-
-- **API**: Express.js + TypeScript
-- **Database**: MongoDB + Mongoose
-- **Caching**: Redis
-- **Security**:
-  - JWT + HttpOnly Cookies
-  - Helmet.js
-  - Rate Limiting
-- **Monitoring**: PM2 + Winston
+---
 
 ## 🛠 Installation
 
 ### Prerequisites
 
-- Node.js >= 16.x
-- MongoDB >= 5.0
-- Redis >= 6.0
-- npm >= 8.x
+- Node.js `>= 16.x`
+- npm `>= 8.x`
+- MongoDB `>= 5.0`
 
-### Development Setup
+### Setup
 
-1. **System Setup**
+```bash
+# Install global tools
+npm install -g typescript ts-node pm2
 
-   ```bash
-   # Install global dependencies
-   npm install -g typescript ts-node pm2
-   ```
+# Clone and configure
+git clone https://github.com/ranad4508/team_project_management.git
+cd worksphere
+cp .env.example .env
 
-2. **Project Setup**
+# Install project dependencies
+npm install
 
-   ```bash
-   # Clone and setup
-   git clone https://github.com/ranad4508/team_project_management.git
-   cd worksphere
-   cp .env.example .env
+# Run migrations if needed
+npm run migrate
+```
 
-   # Install dependencies
-   npm run setup
-   ```
-
-3. **Database Setup**
-
-   ```bash
-   # Start MongoDB
-   docker-compose up -d mongodb redis
-
-   # Run migrations
-   npm run migrate
-   ```
+---
 
 ## ⚙️ Environment Setup
 
 ```env
-# Application
+# Server
 NODE_ENV=development
 PORT=8000
 API_VERSION=v1
 CORS_ORIGIN=http://localhost:3000
 
-# Database
+# MongoDB
 MONGODB_URI=mongodb://localhost:27017/worksphere
-REDIS_URL=redis://localhost:6379
 
 # Authentication
 JWT_SECRET=your-super-secret-key
 JWT_EXPIRES_IN=7d
-SESSION_SECRET=another-secret-key
+SESSION_SECRET=session-secret
 
 # OAuth
-GOOGLE_CLIENT_ID=your-client-id
-GOOGLE_CLIENT_SECRET=your-client-secret
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-# Storage
-AWS_BUCKET_NAME=your-bucket
-AWS_ACCESS_KEY=your-access-key
-AWS_SECRET_KEY=your-secret-key
+# Redis (optional)
+REDIS_URL=redis://localhost:6379
 
-# Monitoring
+# Monitoring (optional)
 SENTRY_DSN=your-sentry-dsn
 ```
 
+---
+
 ## 🔒 Security
 
-- **Authentication**: JWT + Session Cookies
-- **Password Security**: Bcrypt + Pepper
-- **API Security**:
-  - CORS protection
-  - Rate limiting
-  - Request validation
-  - XSS protection
-  - CSRF tokens
-- **Database**:
-  - Encrypted connections
-  - Field-level encryption
-  - Access controls
+- ✅ JWT with HttpOnly cookies
+- ✅ Bcrypt for password hashing
+- ✅ CORS, Helmet, and Rate Limiting
+- ✅ CSRF & XSS Protection
+- ✅ Field-level encryption in sensitive DB models
 
-## 🚀 Deployment
+---
 
-### Docker Deployment
-
-```bash
-# Production build
-docker-compose -f docker-compose.prod.yml build
-
-# Deploy
-docker-compose -f docker-compose.prod.yml up -d
-```
-
-### Cloud Deployment
-
-Supported platforms:
-
-- AWS ECS/EKS
-- Google Cloud Run
-- Azure AKS
-- Digital Ocean
+---
 
 ## ❗ Troubleshooting
 
-Common issues and solutions:
+```bash
+# Health check
+npm run health-check
 
-1. **Connection Issues**
+# Reset MongoDB
+npm run db:reset
+```
 
-   ```bash
-   # Check service health
-   npm run health-check
-
-   # Reset database
-   npm run db:reset
-   ```
+---
 
 ## 📜 License
 
-Copyright © 2023 [Dinesh Kumar Rana](https://github.com/yourusername).
-This project is [MIT](LICENSE) licensed.
+Copyright © 2023  
+[Dinesh Kumar Rana](https://github.com/ranad4508)  
+Licensed under the [MIT License](LICENSE)
 
 ---
 
 <div align="center">
-  <p>If you found this project interesting, please consider giving it a ⭐️</p>
-  
-  [![Stargazers](https://reporoster.com/stars/yourusername/worksphere)](https://github.com/yourusername/worksphere/stargazers)
+  <p>If you found this project helpful, please give it a ⭐</p>
+  <a href="https://github.com/yourusername/worksphere/stargazers">
+    <img src="https://reporoster.com/stars/yourusername/worksphere" alt="Stargazers"/>
+  </a>
 </div>
-````
