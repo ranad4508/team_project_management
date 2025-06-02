@@ -98,7 +98,7 @@ npm run dev
 | **Frontend** | **React.js**, **Vite.js**, **TypeScript**   |
 | **UI/UX**    | **Tailwind CSS**, **Shadcn UI**             |
 | **Database** | **MongoDB**, **Mongoose**                   |
-| **Auth**     | **Google OAuth**, **Cookie-Session"**       |
+| **Auth**     | **Google OAuth**, **Cookie-Session**        |
 
 ---
 
@@ -106,9 +106,9 @@ npm run dev
 
 ### Prerequisites
 
-- Node.js `>= 16.x`
+- Node.js `>= 18.x`
 - npm `>= 8.x`
-- MongoDB `>= 5.0`
+- MongoDB `>= 8.0`
 
 ### Setup
 
