@@ -3,7 +3,7 @@
 <div align="center">
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/yourusername/worksphere/build.yml?branch=main)](https://github.com/yourusername/worksphere/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ranad4508/team_project_management/build.yml?branch=main)](https://github.com/ranad4508/team_project_management/actions)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![Node Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
