@@ -95,7 +95,6 @@ npm run dev
 | Layer        | Technology                                  |
 | ------------ | ------------------------------------------- |
 | **Backend**  | **Node.js**, **Express.js**, **TypeScript** |
-| **Frontend** | **React.js**, **Vite.js**, **TypeScript**   |
 | **UI/UX**    | **Tailwind CSS**, **Shadcn UI**             |
 | **Database** | **MongoDB**, **Mongoose**                   |
 | **Auth**     | **Google OAuth**, **Cookie-Session**        |
